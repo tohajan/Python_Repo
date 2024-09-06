@@ -1,2 +1,2 @@
 # datasci
-All about data programming
+This folder contains practices and tutorials on data science using Python
