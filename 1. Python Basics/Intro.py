@@ -38,13 +38,34 @@ print(type(2.5)) #prints out "<class 'float'>"
 
 
 
-#****************VARIABLE ANNOTATION******************************
+#****************TYPE ANNOTATION FOR VARIABLES******************************
 name: str="Betty" #the "str" helps to label (annotate) the variable name, i.e., hint that the variable should hold a string value.
 age: int=34 #likewise, "int" hints that the age variable should hold an integer type value
 
 #However, Python is flexible and doesn't require a programmer to declare variable types. That is, the type of variable can change over 
 #..time as new values are assigned to it. This phenomenon is known as dynamic typing (allows programmers to write code more quickly and 
 #..offers flexibility because you don’t have to explicitly declare the type of variable)
+
+# More on variable annotation...
+#Type annotations are optional in Python. They can be very helpful, though, because they make code easier to read. Annotations 
+# ..make the variable types clear to those reading the code. They can also help you catch errors during compilation. In the example 
+# ..below, we are using the typing module to annotate the different types of variables.
+import typing
+# Define a variable of type str
+z: str = "Hello, world!"
+# Define a variable of type int
+x: int = 10
+# Define a variable of type float
+y: float = 1.23
+# Define a variable of type list
+list_of_numbers: typing.List[int] = [1, 2, 3]
+# Define a variable of type tuple
+tuple_of_numbers: typing.Tuple[int, int, int] = (1, 2, 3)
+# Define a variable of type dict
+dictionary: typing.Dict[str, int] = {"key1": 1, "key2": 2}
+# Define a variable of type set
+set_of_numbers: typing.Set[int] = {1, 2, 3}
+
 
 #*****************
 print(7+8.5)
