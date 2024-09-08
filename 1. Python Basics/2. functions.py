@@ -31,8 +31,10 @@ def convert_seconds(seconds):
     minutes = (seconds - hours * 3600) // 60
     remaining_seconds = seconds - hours * 3600 - minutes * 60
     return hours, minutes, remaining_seconds
-five_thousand_seconds_equivalent = convert_seconds(5000)
-print(five_thousand_seconds_equivalent)
+hrs, mins, rem_secs = convert_seconds(5000) #When a function returns muliple values, these values MUST be stored in separate variables
+print(hrs, mins, rem_secs)
+print("5000 seconds equals " + str(hrs) + "hrs, " + str(mins) + "mins, and " + str(rem_secs) + " secs") #a task like this is possible
+#..because the values are stored in separate variables 
 
 def greeting(name):
     print("Welcome, " + name)
@@ -76,3 +78,34 @@ circle_area(5) #Output is 78.5
 #..understandable. The code is simply writtent to be more explanatory without changing its functonality). Thus, this code is
 #..self-documenting
 
+
+
+
+#*****************------------PRACTICE QUIZ------------------***********************
+# 1. This function converts miles to kilometers (km).
+#   Complete the function to return the result of the conversion
+#   Call the function to convert the trip distance from miles to kilometers
+#   Fill in the blank to print the result of the conversion
+#   Calculate the round-trip in kilometers by doubling the result, and fill in the blank to print the result
+# 1) Complete the function to return the result of the conversion
+def convert_distance(miles):
+	km = miles * 1.6  # approximately 1.6 km in 1 mile
+	return km
+my_trip_miles = 55
+# 2) Convert my_trip_miles to kilometers by calling the function above
+my_trip_km = convert_distance(my_trip_miles)
+# 3) Fill in the blank to print the result of the conversion
+print("The distance in kilometers is " + str(my_trip_km))
+# 4) Calculate the round-trip in kilometers by doubling the result, and fill in the blank to print the result
+print("The round-trip in kilometers is " + str(my_trip_km * 2))
+
+
+#2. Let's revisit our lucky_number function. We want to change it, so that instead of printing the message, it returns the 
+#..message. This way, the calling line can print the message, or do something else with it if needed. Fill in the blanks to 
+#..complete the code to make it work.
+def lucky_number(name):
+  number = len(name) * 9
+  output = "Hello " + name + ". Your lucky number is " + str(number)
+  return output
+print(lucky_number("Kay"))
+print(lucky_number("Cameron"))
