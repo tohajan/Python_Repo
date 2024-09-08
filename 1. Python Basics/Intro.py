@@ -76,8 +76,8 @@ height = 3
 area = (base*height)/2
 print("The area of the triangle is: " + str(area)) #the str() function here converts the numerical object to a string
 
-# PRACTICE QUESTION
-#In this scenario, we have a directory with 5 files in it. Each file has a different size: 2048, 4357, 97658, 125, and 8. Fill in the 
+# EXAMPLES
+#1. In this scenario, we have a directory with 5 files in it. Each file has a different size: 2048, 4357, 97658, 125, and 8. Fill in the 
 #..blanks to calculate the average file size by having Python add all the values for you, and then set the files variable to the number 
 #..of files. Finally, output a message saying "The average size is: " followed by the resulting number. Remember to use the str() function 
 #..to convert the number into a string. 
@@ -85,3 +85,46 @@ total = 2048 + 4357 + 97658 + 125 + 8
 files = 5
 average = total / files
 print("The average size is: " + str(average))
+
+#2. (Skillset: 
+#       -Output multiple string variables on a single line to form a sentence
+#       -Use the plus (+) connector or a comma to connect strings in a print() function
+#       -Create spaces between variables in  a print() function)
+# The following 5 lines assign strings to a list of variables.
+salutation = "Dr."
+first_name = "Prisha"
+middle_name = "Jai"
+last_name = "Agarwal"
+suffix = "Ph.D."
+ 
+print(salutation + " " + first_name + " " + middle_name + " " + last_name + ", " + suffix) 
+# The comma as a string ", " adds the conventional use of a comma plus a 
+# space to separate the last name from the suffix.
+ 
+# Alternatively, you could use commas in place of the + connector:
+print(salutation, first_name, middle_name, last_name,",", suffix)
+# However, this produces a space before a comma within a string.
+
+
+
+#**********************----------PRACTICE QUIZ----------**************************
+#1. In this scenario, two friends are eating dinner at a restaurant. The bill comes in the amount of 47.28 dollars. The friends 
+#..decide to split the bill evenly between them, after adding 15% tip for the service. Calculate the tip, the total amount to pay, 
+#..and each friend's share, then output a message saying "Each person needs to pay: " followed by the resulting number.
+bill = 47.28 # Assign "bill" variable with bill amount
+tip = bill * 0.15 # Multiply by stated tip rate 
+total = bill + tip # Sum the "total" of the "bill" and "tip"
+share = total/2 # Divide "total" by number of friends dining
+print("Each person needs to pay: " + str(share)) # Enter the required string and "share"
+
+#2. Combine the variables to display the sentence "How do you like Python so far?" 
+word1 = "How"
+word2 = "do"
+word3 = "you"
+word4 = "like"
+word5 = "Python"
+word6 = "so"
+word7 = "far?"
+print(word1 + " " + word2 + " " + word3 + " " + word4 + " " + word5 + " " + word6 +  " " + word7)
+#Alternatively:
+print(word1, word2, word3, word4, word5, word6, word7)
